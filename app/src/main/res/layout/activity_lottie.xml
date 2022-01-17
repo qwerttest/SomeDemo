@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anvCountDown"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        app:lottie_fileName="data.json"
+        app:lottie_imageAssetsFolder="question_next_prepare"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="play"
+        android:text="Play"
+        android:layout_gravity="bottom"/>
+</FrameLayout>

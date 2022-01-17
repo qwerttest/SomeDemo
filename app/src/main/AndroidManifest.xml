@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.bitmaprecycledemo">
+
+    <application
+        android:name="com.example.MApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BitmapRecycleDemo">
+        <activity
+            android:name="com.example.exceptions.deadobject.MainActivity"
+            android:label="@string/app_name"
+            android:allowEmbedded="true"
+            android:theme="@style/Theme.BitmapRecycleDemo.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.example.verify.CustomReceiver">
+            <intent-filter>
+                <action android:name="com.llew.huawei.verifier"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.example.verify.SimReceiver">
+            <intent-filter>
+                <action android:name="com.llew.huawei.test"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.example.exceptions.deadobject.MyService"
+            android:process=":service"/>
+        <service android:name=".TestService" />
+
+
+    </application>
+
+</manifest>
